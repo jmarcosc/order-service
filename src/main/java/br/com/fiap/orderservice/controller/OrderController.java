@@ -1,6 +1,7 @@
 package br.com.fiap.orderservice.controller;
 
 import br.com.fiap.orderservice.Order;
+import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,6 +14,7 @@ import java.util.*;
 @Slf4j
 @RestController
 @RequestMapping(value = "/orders", produces = "application/hal+json")
+@Api(value = "Order", description = "orders management")
 public class OrderController {
 
     List<Order> orders = new ArrayList<>();
